@@ -23,7 +23,6 @@ class TextFileReader {
 
     List<Character> list = new ArrayList<>(10000);
     String f = "src/p03/f.txt";
-//  f = "r_j.txt";
 
     FileReader r = new FileReader(f);
     while (true) {
@@ -39,7 +38,7 @@ class TextFileReader {
   }
 
   private static List<CharCount> characterCount(List<Character> list) {
-    List<CharCount> result = new ArrayList<>(100);
+    List<CharCount> result = new ArrayList<>(1000);
     for (Character c : list) {
       boolean found = false;
       for (CharCount cc : result) {
@@ -58,7 +57,7 @@ class TextFileReader {
 
   private static void print(List<CharCount> list) {
     for (CharCount cc : list) {
-      System.out.println(cc.c + " " + cc.count);
+      System.out.println(cc.c + "/" + cc.count);
     }
   }
 }
